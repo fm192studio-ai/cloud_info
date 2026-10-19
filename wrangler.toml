@@ -1,0 +1,20 @@
+name = "remote-address-collector"
+main = "src/index.js"
+compatibility_date = "2024-04-01"
+
+# 环境变量配置
+[vars]
+APP_TITLE = "远程跨境地址归档中心"
+# 可选：如果不在 Cloudflare 控制台或 wrangler secret 设置密码，也可临时在此写入明文密码
+# 建议通过命令添加加密密码：npx wrangler secret put ADMIN_PASSWORD
+ADMIN_PASSWORD = "[PASSWORD]"
+
+# Cloudflare D1 数据库绑定
+# 运行步骤：
+# 1. 运行 `npx wrangler d1 create address_db`
+# 2. 将终端输出的 database_id 替换下面的占位符
+# 3. 运行 `npx wrangler d1 execute address_db --remote --file=./schema.sql`
+[[d1_databases]]
+binding = "DB"
+database_name = "address_db"
+database_id = "8312a2c1-a29c-49e2-ab57-943059700878"

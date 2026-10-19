@@ -1,0 +1,18 @@
+{
+  "name": "remote-address-collector-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers + D1 Serverless 跨境电商地址采集中心",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create address_db",
+    "db:init:remote": "wrangler d1 execute address_db --remote --file=./schema.sql",
+    "db:init:local": "wrangler d1 execute address_db --local --file=./schema.sql",
+    "secret:set": "wrangler secret put ADMIN_PASSWORD",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.109.2"
+  }
+}
