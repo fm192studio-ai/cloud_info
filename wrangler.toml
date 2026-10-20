@@ -4,10 +4,10 @@ compatibility_date = "2024-04-01"
 
 # 环境变量配置
 [vars]
-APP_TITLE = "远程跨境地址归档中心"
+APP_TITLE = "数据集合"
 # 可选：如果不在 Cloudflare 控制台或 wrangler secret 设置密码，也可临时在此写入明文密码
 # 建议通过命令添加加密密码：npx wrangler secret put ADMIN_PASSWORD
-ADMIN_PASSWORD = "[PASSWORD]"
+ADMIN_PASSWORD = "89901011"
 
 # Cloudflare D1 数据库绑定
 # 运行步骤：
