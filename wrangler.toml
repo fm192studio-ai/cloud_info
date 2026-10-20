@@ -16,5 +16,5 @@ ADMIN_PASSWORD = "[PASSWORD]"
 # 3. 运行 `npx wrangler d1 execute address_db --remote --file=./schema.sql`
 [[d1_databases]]
 binding = "DB"
-database_name = "address_db"
+database_name = "cloud_info"
 database_id = "8312a2c1-a29c-49e2-ab57-943059700878"
